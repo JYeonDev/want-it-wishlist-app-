@@ -1,5 +1,10 @@
 function Wishlist() {
-  return <div>위시리스트입니다</div>;
+  return (
+    <>
+      <nav className="category">영역</nav>
+      <div className="wishlist">구분</div>
+    </>
+  );
 }
 
 export default Wishlist;

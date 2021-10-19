@@ -8,8 +8,17 @@ import Notice from "./components/notice";
 import Login from "./components/login";
 import SignUp from "./components/signup";
 import Welcome from "./components/welcome";
+import { useEffect, useState } from "react";
 
 function App(props) {
+  let [show, setShow] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(false);
+    }, 500);
+  });
+
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">
@@ -37,7 +46,7 @@ function App(props) {
       </Navbar>
 
       <Route exact path="/">
-        <Notice />
+        {show === false ? <Notice /> : null}
       </Route>
 
       <Route path="/wishlist">

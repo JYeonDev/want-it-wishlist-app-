@@ -17,7 +17,7 @@ function Login() {
         <Form.Check type="checkbox" label="아이디저장" />
       </Form.Group>
       <Button variant="primary" type="button" className="login">
-        로그인
+        <Link to="/">로그인</Link>
       </Button>
       <Button
         variant="primary"
