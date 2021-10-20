@@ -91,3 +91,14 @@ a:hover {
   opacity: 1;
   transform: scale(1.1);
 }
+
+.modal-container {
+  width: 200px;
+  height: 100px;
+  margin: 10px auto;
+  border: 2px solid black;
+}
+
+.modal-header {
+  box-sizing: border-box;
+}
