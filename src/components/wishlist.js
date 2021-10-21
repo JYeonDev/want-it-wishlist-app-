@@ -5,6 +5,7 @@ function Wishlist() {
   /* let history = useHistory(); */
   let categoryList = [];
   let [categoryOnOff, setCategoryOnOff] = useState(false);
+  let [categoryValue, setCategoryValue] = useState("");
 
   function onOff() {
     setCategoryOnOff(!categoryOnOff);
@@ -24,7 +25,13 @@ function Wishlist() {
               <button>x</button>
             </div>
             <form className="modal-text">
-              <input type="text" placeholder="카테고리명을 입력하세요."></input>
+              <input
+                type="text"
+                placeholder="카테고리명을 입력하세요."
+                onChange={(e) => {
+                  console.log(e.target.value);
+                }}
+              ></input>
               <button type="submit">추가</button>
             </form>
           </div>
