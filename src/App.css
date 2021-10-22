@@ -75,6 +75,13 @@ a:hover {
   height: 25px;
 }
 
+.category {
+  width: 800px;
+  height: 100px;
+  background-color: gray;
+  margin: 0 auto;
+}
+
 .category-plus {
   width: 30px;
   height: 30px;
@@ -85,6 +92,8 @@ a:hover {
   transition: all 0.5s;
   color: #fff;
   border: none;
+  display: flex;
+  margin: 10px;
 }
 
 .category-plus:hover {
@@ -97,4 +106,15 @@ a:hover {
   height: 100px;
   margin: 10px auto;
   border: 2px solid black;
+  background-color: rgb(245, 240, 240);
+  position: relative;
+  z-index: 999;
 }
+
+/* .modal-box {
+  width: 500px;
+  height: 50px;
+  background-color: black;
+  margin: 0 auto;
+}
+ */
