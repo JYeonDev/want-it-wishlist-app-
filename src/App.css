@@ -82,6 +82,16 @@ a:hover {
   margin: 0 auto;
 }
 
+.category-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.category-list {
+  margin: 5px;
+}
+
 .category-plus {
   width: 30px;
   height: 30px;
@@ -110,11 +120,3 @@ a:hover {
   position: relative;
   z-index: 999;
 }
-
-/* .modal-box {
-  width: 500px;
-  height: 50px;
-  background-color: black;
-  margin: 0 auto;
-}
- */

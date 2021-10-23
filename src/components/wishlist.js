@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
 
 function Wishlist() {
   /* let history = useHistory(); */
-  let [categoryList, setCategoryList] = useState(["+"]);
+  let [categoryList, setCategoryList] = useState([]);
   let [categoryOnOff, setCategoryOnOff] = useState(false);
   let [categoryValue, setCategoryValue] = useState("");
 
@@ -15,9 +14,14 @@ function Wishlist() {
     <>
       <nav className="category">
         <div style={{ margin: "20px" }}>카테고리</div>
-        <button className="category-plus" onClick={onOff}>
-          {categoryList[0]}
-        </button>
+        <div className="category-flex">
+          {categoryList.map(function (list) {
+            return <button className="category-list">{list}</button>;
+          })}
+          <button className="category-plus" onClick={onOff}>
+            +
+          </button>
+        </div>
         {categoryOnOff === true ? (
           <div className="modal-container">
             <div className="modal-header">
