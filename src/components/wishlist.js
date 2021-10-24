@@ -15,8 +15,17 @@ function Wishlist() {
       <nav className="category">
         <div style={{ margin: "20px" }}>카테고리</div>
         <div className="category-flex">
-          {categoryList.map(function (list) {
-            return <button className="category-list">{list}</button>;
+          {categoryList.map(function (list, i) {
+            return (
+              <div key={i}>
+                <button className="category-list">
+                  {list}
+                  <button className="category-close" style={{ color: "red" }}>
+                    x
+                  </button>
+                </button>
+              </div>
+            );
           })}
           <button className="category-plus" onClick={onOff}>
             +
@@ -49,7 +58,9 @@ function Wishlist() {
           </div>
         ) : null}
       </nav>
-      <div className="wishlist">구분</div>
+      <div className="wishlist" style={{ marginTop: "50px" }}>
+        구분
+      </div>
     </>
   );
 }
