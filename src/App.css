@@ -128,3 +128,16 @@ a:hover {
   position: relative;
   z-index: 999;
 }
+
+.card-container {
+  width: 200px;
+  height: 250px;
+  border: solid 2px black;
+}
+
+.card-img {
+  width: 100%;
+  height: 150px;
+  border-bottom: solid 2px black;
+  border-radius: 0;
+}

@@ -11,11 +11,12 @@ function Wishlist() {
   }
 
   return (
-    <>
+    <div>
       <nav className="category">
         <div style={{ margin: "20px" }}>카테고리</div>
         <div className="category-flex">
           {categoryList.map(function (list, i) {
+            console.log(i, categoryList);
             return (
               <div key={i}>
                 <button className="category-list">
@@ -58,10 +59,18 @@ function Wishlist() {
           </div>
         ) : null}
       </nav>
-      <div className="wishlist" style={{ marginTop: "50px" }}>
-        구분
+      <div className="wishlist category" style={{ marginTop: "30px" }}>
+        <div className="card-container">
+          <div className="card-img">
+            <img src=""></img>
+          </div>
+          <div className="card-info">
+            <p>제품명 : </p>
+            <p>가격 : </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

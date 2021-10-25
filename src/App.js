@@ -10,7 +10,7 @@ import SignUp from "./components/signup";
 import Welcome from "./components/welcome";
 import { useEffect, useState } from "react";
 
-function App(props) {
+function App() {
   let [show, setShow] = useState(true);
 
   useEffect(() => {
