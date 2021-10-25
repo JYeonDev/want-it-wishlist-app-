@@ -60,15 +60,18 @@ function Wishlist() {
         ) : null}
       </nav>
       <div className="wishlist category" style={{ marginTop: "30px" }}>
-        <div className="card-container">
-          <div className="card-img">
-            <img src=""></img>
+        <button className="category-plus">+</button>
+        {1 == 2 ? (
+          <div className="card-container">
+            <div className="card-img">
+              <img></img>
+            </div>
+            <div className="card-info">
+              <p>제품명 : </p>
+              <p>가격 : </p>
+            </div>
           </div>
-          <div className="card-info">
-            <p>제품명 : </p>
-            <p>가격 : </p>
-          </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

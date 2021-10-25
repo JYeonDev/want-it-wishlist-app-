@@ -104,8 +104,8 @@ a:hover {
   border-radius: 3px;
   font-weight: 700;
   transition: all 0.5s;
-  color: #fff;
-  background-color: green;
+  background-color: #fff;
+  color: #000;
   border: none;
   display: flex;
   margin: 10px;
