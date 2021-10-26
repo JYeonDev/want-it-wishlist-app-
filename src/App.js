@@ -17,7 +17,7 @@ function App() {
     setTimeout(() => {
       setShow(false);
     }, 500);
-  });
+  }, []);
 
   return (
     <div className="App">
