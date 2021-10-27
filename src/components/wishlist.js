@@ -61,7 +61,7 @@ function Wishlist() {
       </nav>
       <div className="wishlist category" style={{ marginTop: "30px" }}>
         <button className="category-plus">+</button>
-        {1 == 2 ? (
+        {1 == 1 ? (
           <div className="card-container">
             <div className="card-img">
               <img></img>
@@ -69,6 +69,10 @@ function Wishlist() {
             <div className="card-info">
               <p>제품명 : </p>
               <p>가격 : </p>
+            </div>
+            <div className="card-href">
+              <button className="blue-button">이동</button>
+              <button className="red-button">삭제</button>
             </div>
           </div>
         ) : null}
