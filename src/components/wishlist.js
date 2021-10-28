@@ -5,6 +5,7 @@ function Wishlist() {
   let [categoryList, setCategoryList] = useState([]);
   let [categoryOnOff, setCategoryOnOff] = useState(false);
   let [categoryValue, setCategoryValue] = useState("");
+  let [data, setData] = useState(["임시데이터"]);
 
   function onOff() {
     setCategoryOnOff(!categoryOnOff);
@@ -67,8 +68,8 @@ function Wishlist() {
               <img></img>
             </div>
             <div className="card-info">
-              <p>제품명 : </p>
-              <p>가격 : </p>
+              <p>제품명 : {data[0]}</p>
+              <p>가격 : {data[0]}</p>
             </div>
             <div className="card-href">
               <button className="blue-button">이동</button>
