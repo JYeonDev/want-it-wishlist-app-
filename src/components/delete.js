@@ -23,7 +23,7 @@ function Delete() {
                 복구
               </button>
               <button className="red-button">영구삭제</button>
-              {repair === true ? <div>리얼 삭제 ?</div> : null}
+              {repair === true ? <div>처리 예정</div> : null}
             </div>
           </div>
         </div>

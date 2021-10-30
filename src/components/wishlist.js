@@ -11,6 +11,10 @@ function Wishlist() {
     setCategoryOnOff(!categoryOnOff);
   }
 
+  function onReset() {
+    setCategoryValue("");
+  }
+
   return (
     <div>
       <nav className="category">
@@ -46,12 +50,14 @@ function Wishlist() {
                 onChange={(e) => {
                   setCategoryValue(e.target.value);
                 }}
+                value={categoryValue}
               ></input>
               <button
                 onClick={() => {
                   let categoryListCopy = [...categoryList];
                   categoryListCopy.push(categoryValue);
                   setCategoryList(categoryListCopy);
+                  onReset();
                 }}
               >
                 추가
@@ -62,7 +68,7 @@ function Wishlist() {
       </nav>
       <div className="wishlist category" style={{ marginTop: "30px" }}>
         <button className="category-plus">+</button>
-        {1 == 1 ? (
+        {1 == 2 ? (
           <div className="card-container">
             <div className="card-img">
               <img></img>
