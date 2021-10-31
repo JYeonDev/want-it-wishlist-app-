@@ -15,13 +15,26 @@ function Wishlist() {
     setCategoryValue("");
   }
 
+  function onClick() {
+    let categoryListCopy = [...categoryList];
+    categoryListCopy.push(categoryValue);
+    setCategoryList(categoryListCopy);
+    onReset();
+  }
+
+  function onKeyPress(e) {
+    if (e.key === "Enter") {
+      onClick();
+    }
+  }
+
   return (
     <div>
       <nav className="category">
         <div style={{ margin: "20px" }}>카테고리</div>
         <div className="category-flex">
           {categoryList.map(function (list, i) {
-            console.log(i, categoryList);
+            console.log(list, i);
             return (
               <div key={i}>
                 <button className="category-list">
@@ -50,18 +63,10 @@ function Wishlist() {
                 onChange={(e) => {
                   setCategoryValue(e.target.value);
                 }}
+                onKeyPress={onKeyPress}
                 value={categoryValue}
               ></input>
-              <button
-                onClick={() => {
-                  let categoryListCopy = [...categoryList];
-                  categoryListCopy.push(categoryValue);
-                  setCategoryList(categoryListCopy);
-                  onReset();
-                }}
-              >
-                추가
-              </button>
+              <button onClick={onClick}>추가</button>
             </div>
           </div>
         ) : null}
